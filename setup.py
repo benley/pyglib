@@ -1,11 +1,30 @@
 #!/usr/bin/env python
 
-from setuptools import setup
+import os
+import setuptools
 
-setup(name='pyglib',
-      version='0.1',
-      description='Opinionated but handy app startup wrapper.',
-      url='https://github.com/benley/pyglib',
-      author='Benjamin Staffin',
-      author_email='benley@gmail.com',
-      packages=['pyglib'])
+VERSION = '0.1'
+
+README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
+
+setuptools.setup(
+    name='pyglib',
+    author='Benjamin Staffin',
+    author_email='benley@gmail.com',
+    url='https://github.com/benley/pyglib',
+    install_requires=['python-gflags', 'glog'],
+    description='Opinionated but handy app startup wrapper.',
+    long_description=README,
+    packages=['pyglib'],
+    license='BSD',
+    version=VERSION,
+    classifiers=[
+        'Programming Language :: Python',
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Topic :: System :: Logging',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ],
+    platforms='any',
+)
