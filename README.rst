@@ -6,6 +6,12 @@ scripts and applications in Python. It makes use of python-gflags and
 python-glog, and adds an app startup helper that deals with
 initialization boilerplate so you don't have to think about it.
 
+**NOTE:** you may also want to check out google.apputils.app_, (part of
+google-apputils_) which does something extremely similar to this module.  If I
+had been aware of that project's existence in summer 2015, I probably would not
+have created this one.  This module is considerably simpler and smaller in
+scope than google-apputils, so perhaps you'll still find it useful.
+
 Example usage:
 --------------
 
@@ -37,3 +43,6 @@ function.
 This example module can also be imported as a library for use in another
 app. When used that way, any script that imports this one will inherit
 the ``--bananas`` flag defined here.
+
+.. _google.apputils.app: https://github.com/google/google-apputils/blob/master/google/apputils/app.py
+.. _google-apputils: https://github.com/google/google-apputils
